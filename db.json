@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "codertruong2001@gmail.com",
+      "password": "$2a$10$tKQ3.7fG24mow514y1DH.OEwAsZajwUu..cFZhNK8XNaBAytpQMdC",
+      "firstName": "Truong",
+      "lastName": "DQ",
+      "id": 1
+    },
+    {
+      "email": "codertruonxxxg2001@gmail.com",
+      "password": "$2a$10$ADC.Tngz6/22GyT3lCza8OIu5EmLtLuBy2qDn3Xhyb0soa8hsAHgu",
+      "id": 2
+    }
+  ]
+}
