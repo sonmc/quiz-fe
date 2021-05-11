@@ -1,7 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import rootSlices from "./slices";
-const store = configureStore({
-  reducer: rootSlices,
-});
+import {createStore, compose, applyMiddleware} from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
+import rootSaga from './saga';
+import rootReducers from './reducers';
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(
+  rootReducers,
+  compose(applyMiddleware(sagaMiddleware)),
+);
+sagaMiddleware.run(rootSaga);
+store.runSaga = sagaMiddleware.run;
 export default store;

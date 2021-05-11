@@ -8,4 +8,6 @@ export const ROUTER_NAME = {
   COURSES_MANAGER: "/courses-manager",
   CREATE_COURSE: "/create-course",
   CONFIRM_CODE_RESET_PASSWORD: "/confirm-code-reset-password",
+  LIST_PRODUCT: "/list-product",
+  PRODUCT_DETAL: '/product_detail'
 };
