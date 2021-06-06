@@ -23,7 +23,6 @@ export const STATUS_CODE = {
 
 API.interceptors.request.use(
   async (config) => {
-    // console.log(config);
     const accessToken = await localStorage.getItem("token");
     if (accessToken != null) {
       config.headers.Authorization = `Bearer ${accessToken}`;

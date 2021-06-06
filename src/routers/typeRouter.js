@@ -1,13 +1,7 @@
 export const ROUTER_NAME = {
-  LOGIN_SCREEN: "/login",
-  REGISTER_SCREEN: "/register",
-  FORGOT_PASSWORD_SCREEN: "/forgot-password",
-  HOME_PAGE: "/",
-  PERSONAL_MANAGER: "/personal-manager",
-  USERS_MANAGER: "/list-users-manager",
-  COURSES_MANAGER: "/courses-manager",
-  CREATE_COURSE: "/create-course",
-  CONFIRM_CODE_RESET_PASSWORD: "/confirm-code-reset-password",
-  LIST_PRODUCT: "/list-product",
-  PRODUCT_DETAL: '/product_detail'
+  LOGIN_PAGE: "/login",
+  PRODUCT_PAGE: "/product",
+  USER_LIST: "/listUser",
+  UPDATE_USER_PAGE: "/update-user",
+  CREATE_USER_PAGE: "/create-user"
 };

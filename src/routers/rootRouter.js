@@ -1,30 +1,21 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import LoginScreen from "../views/Authentication/LoginScreen";
+import Login from "../views/user/login";
 import { ROUTER_NAME } from "./typeRouter";
-import NotFound from "../views/NotFound";
-import RegisterScreen from "../views/Authentication/RegisterScreen";
-import HomeScreen from "../views/Containers/HomeScreen";
-import Product from "../views/Containers/Product";
-import Detail from "../views/Containers/Product/Detail";
-
+import { Route, Switch, Redirect } from "react-router-dom";
+import UserList from "../views/user/list";
+import CreateUser from "../views/user/create";
+import UpdateUser from "../views/user/update";
+import ProductList from "../views/product/list";
 function RootRouter() {
   return (
     <Switch>
-      <Route path={ROUTER_NAME.LOGIN_SCREEN} component={LoginScreen} exact />
-      <Route
-        path={ROUTER_NAME.REGISTER_SCREEN}
-        component={RegisterScreen}
-        exact
-      />
-      <Route path={ROUTER_NAME.PRODUCT_DETAL} component={Detail} exact />
-      <Route path={ROUTER_NAME.LIST_PRODUCT} component={Product} exact />
-      <Route path={ROUTER_NAME.HOME_PAGE} component={HomeScreen} exact />
-      <Route path={"*"} component={NotFound} exact />
-
-
+      <Redirect exact from="/" to={ROUTER_NAME.LOGIN_PAGE} />
+      <Route path={ROUTER_NAME.LOGIN_PAGE} component={Login} exact />
+      <Route path={ROUTER_NAME.USER_LIST} component={UserList} exact />
+      <Route path={ROUTER_NAME.PRODUCT_PAGE} component={ProductList} exact />
+      <Route path={ROUTER_NAME.CREATE_USER_PAGE} component={CreateUser} exact />
+      <Route path={ROUTER_NAME.UPDATE_USER_PAGE} component={UpdateUser} exact />
     </Switch>
   );
 }
-
 export default RootRouter;
